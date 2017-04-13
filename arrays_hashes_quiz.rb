@@ -3,41 +3,45 @@
 lines = ['Gyle Centre', 'Edinburgh Park', 'Murrayfield Stadium', 'Haymarket', 'Princes Street']
 
 # 1. Work out how many stops there are in the array
-# puts lines.length()
+# lines.length()
+# lines.size()
+# lines.count()
 
-# # 2. Return 'Edinburgh Park' from the array
-# puts lines[1]
+# # # 2. Return 'Edinburgh Park' from the array
+# lines[1]
+# lines[-4]
 
 # # 3. How many ways can we return 'Princes Street' from the array?
 # puts lines.last
 # puts lines[4]
-# # puts lines.pop  <!-- Works, but changes the array! -->
+# puts lines.pop  <!-- Works, but changes the array! -->
 # puts lines[-1]
-# puts lines.fetch(-1)
+# puts lines.fetch(-1)   // this one is cool; it'll throw an index error if we try to go out of bounds
+# lines.drop(4).pop()    // returns an array of one element, which we pop off
+# lines.max()            // returns Princes Street, which is the 'biggest' element!
 
 # # 4. Work out the index position of 'Haymarket'
 # puts lines.find_index("Haymarket")
+# lines.index("Haymarket")
 
 # # 5. Add 'Airport' to the start of the array
 # puts lines.unshift("Airport")
+# lines.insert(0, "Airport")
 # # puts lines
 
 # # 6. Add 'York Place' to the end of the array
 # puts lines << "York Place"
+# lines.push("York Place")
 
 # 7. Remove 'Edinburgh Park' from the array using it's name
 # lines.delete("Edinburgh Park")
 # puts lines
 
 # 8. Delete 'Edinburgh Park' from the array by index
-# puts lines
-# puts
 # lines.delete_at(1)
 # puts lines
 
 # 9. Reverse the positions of the stops in the array
-# puts lines
-# puts
 # lines.reverse!
 # puts lines
 
@@ -48,6 +52,7 @@ my_hash = {"0" => "Zero", 1 => "One", :two => "Two", "two" => 2}
 
 # 1. How would you return the string `"One"`?
 # puts my_hash[1]
+# my_hash.fetch(1)
 
 # 2. How would you return the string `"Two"`?
 # puts my_hash[:two]
@@ -112,6 +117,7 @@ users = {
 
 # 5. Return the smallest of Erik's favorite numbers
 # puts users["Erik"][:favourite_numbers].sort.first
+# puts users["Erik"][:favourite_numbers].min()
 
 # 6. Add the number `7` to Erik's favorite numbers
 # users["Erik"][:favourite_numbers].push(7)
